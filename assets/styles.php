@@ -95,6 +95,7 @@ function auto_version_css($file) {
     update_option($file, $newFileName);
     // And delete the old stylesheet
     if ($currentStylesheet !== "Stylesheet Not Set" ) {
+
         unlink(CHILDDIR . $currentStylesheet);
     }
     if (!file_exists(CHILDDIR . $newFileName)) {
@@ -111,12 +112,12 @@ function auto_version_css($file) {
 add_action( 'wp_enqueue_scripts', function() {
 
     // Child Stylesheet
-    $fileName = auto_version_css( '/assets/beverage-dynamics.css' );
-    wp_register_style( 'BDX-Styles', CHILDURI . $fileName, array('theme-style') );
-    wp_enqueue_style( 'BDX-Styles' );
+    $fileName = auto_version_css( '/assets/cheers.css' );
+    wp_register_style( 'CHR-Styles', CHILDURI . $fileName, array('theme-style') );
+    wp_enqueue_style( 'CHR-Styles' );
 
     $adminFileName = '/assets/beverage-admin.css';
-    wp_enqueue_style( 'BDX-Admin', CHILDURI . $adminFileName );
+    wp_enqueue_style( 'CHR-Admin', CHILDURI . $adminFileName );
 
     // Extra JS
     wp_enqueue_script(
@@ -127,21 +128,12 @@ add_action( 'wp_enqueue_scripts', function() {
         TRUE
     );
 
-    /*// Maps
-    wp_enqueue_script(
-        'wine-map',
-        CHILDURI . '/widgets/wine-map/wi.js',
-        array('jquery', 'foundation'),
-        '',
-        TRUE
-    );*/
-
 });
 
 add_action( 'admin_head', function() {
 
     // Child Stylesheet
     $adminFileName = auto_version_css( '/assets/beverage-admin.css' );
-    wp_enqueue_style( 'BDX-Admin', CHILDURI . $adminFileName );
+    wp_enqueue_style( 'CHR-Admin', CHILDURI . $adminFileName );
 
 });

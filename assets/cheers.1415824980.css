@@ -4127,7 +4127,7 @@ html, body {
 
 body {
   font-size: 12px;
-  background-image: url(http://cheersonline.ehlertmedia.com/wp-content/uploads/sites/3/2014/11/purplebackground.jpg) !important;
+  /*background-image: url(http://cheersonline.ehlertmedia.com/wp-content/uploads/sites/3/2014/11/purplebackground.jpg)!important;*/
   background-repeat: no-repeat !important;
   background-size: cover !important;
   background-attachment: fixed !important; }
@@ -5990,4 +5990,4 @@ Clickable Map
     border-bottom: 2px solid #c6c4b4;
     text-align: center; }
 
-/*# sourceMappingURL=beverage-dynamics.css.map */
+/*# sourceMappingURL=cheers.css.map */

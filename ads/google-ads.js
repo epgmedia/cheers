@@ -11,6 +11,7 @@ googletag.cmd = googletag.cmd || [];
     node.parentNode.insertBefore(gads, node);
 })();
 
+/*
 googletag.cmd.push(function() {
     // Leaderboards
     googletag.defineSlot('/35190362/CHR_ROS_728_Top', [[728, 90], [970, 90]], 'div-gpt-ad-1397065791778-0').addService(googletag.pubads());
@@ -28,4 +29,4 @@ googletag.cmd.push(function() {
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().enableSingleRequest();
     googletag.enableServices();
-});
+});*/
